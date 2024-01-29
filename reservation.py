@@ -19,7 +19,7 @@ def main():
     # Autenticación
     username, password = authentication()
 
-    if username == "lileth" and password == "contraseña_admin":
+    if username == "lileth" and password == "1248":
         st.sidebar.title("Dashboard de Administrador")
         df = load_data()
 
@@ -32,7 +32,7 @@ def main():
         cancelaciones_por_mes = df[df['is_canceled'] == 1].groupby('arrival_date_month')['is_canceled'].count()
         st.bar_chart(cancelaciones_por_mes)
 
-    elif username == "carlos" and password == "contraseña_usuario":
+    elif username == "carlos" and password == "1369":
         st.sidebar.title("Dashboard de Usuario")
         df = load_data()
 
